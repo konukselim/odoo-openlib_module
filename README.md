@@ -1,0 +1,1 @@
+# odoo-openlib_module
