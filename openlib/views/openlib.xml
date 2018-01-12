@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="book_list_action">
+            <field name="name">Books</field>
+            <field name="res_model">openlib.book</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first book
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="main_openlib_menu" name="Open Library"/>
+
+        <menuitem id="openlib_menu" name="Open Library"
+                  parent="main_openlib_menu"/>
+        <menuitem id="books_menu" name="Books" parent="openlib_menu"
+                  action="book_list_action"/>
+
+    </data>
+</odoo>

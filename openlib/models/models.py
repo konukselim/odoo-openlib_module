@@ -2,14 +2,9 @@
 
 from odoo import models, fields, api
 
-# class openlib(models.Model):
-#     _name = 'openlib.openlib'
+class Book(models.Model):
+    _name = 'openlib.book'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    name = fields.Char(string="Title", required=True)
+    isbn = fields.Char(string="ISBN")
+    publication_date = fields.Date()
