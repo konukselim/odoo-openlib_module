@@ -12,12 +12,41 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="genre_list_action">
+            <field name="name">Genres</field>
+            <field name="res_model">openlib.genre</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first genre
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="language_list_action">
+            <field name="name">Languages</field>
+            <field name="res_model">openlib.language</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first language
+                </p>
+            </field>
+        </record>
+
         <menuitem id="main_openlib_menu" name="Open Library"/>
 
         <menuitem id="openlib_menu" name="Open Library"
                   parent="main_openlib_menu"/>
         <menuitem id="books_menu" name="Books" parent="openlib_menu"
                   action="book_list_action"/>
+
+        <menuitem id="configuration_menu" name="Configuration"
+                  parent="main_openlib_menu"/>
+        <menuitem id="genres_menu" name="Genres" parent="configuration_menu"
+                  action="genre_list_action"/>
+        <menuitem id="languages_menu" name="Languages" parent="configuration_menu"
+                  action="language_list_action"/>
 
     </data>
 </odoo>
