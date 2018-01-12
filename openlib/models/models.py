@@ -8,6 +8,11 @@ class Book(models.Model):
     name = fields.Char(string="Title", required=True)
     isbn = fields.Char(string="ISBN")
     publication_date = fields.Date()
+    genre = fields.Many2one('openlib.genre',
+        ondelete='set null', string="Genre", index=True)
+    language = fields.Many2one('openlib.language',
+        ondelete='set null', string="Language", index=True)
+
 
 class BookGenre(models.Model):
     _name = 'openlib.genre'
