@@ -58,12 +58,9 @@
                   parent="main_openlib_menu"/>
         <menuitem id="books_menu" name="Books" parent="openlib_menu"
                   action="book_list_action"/>
-
-        <menuitem id="configuration_menu" name="Configuration"
-                  parent="main_openlib_menu"/>
-        <menuitem id="genres_menu" name="Genres" parent="configuration_menu"
+        <menuitem id="genres_menu" name="Genres" parent="openlib_menu"
                   action="genre_list_action"/>
-        <menuitem id="languages_menu" name="Languages" parent="configuration_menu"
+        <menuitem id="languages_menu" name="Languages" parent="openlib_menu"
                   action="language_list_action"/>
 
     </data>

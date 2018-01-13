@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="partner_author_form_view">
+            <field name="name">partner.author</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Authors">
+                        <group>
+                            <field name="author"/>
+                            <field name="written_books"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="partner_publisher_form_view">
+            <field name="name">partner.publisher</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Book Publishers">
+                        <group>
+                            <field name="publisher"/>
+                            <field name="published_books"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="author_list_action">
+            <field name="name">Authors</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="book_publisher_list_action">
+            <field name="name">Book Publishers</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="configuration_menu" name="Configuration"
+                  parent="main_openlib_menu"/>
+        <menuitem id="author_menu" name="Authors"
+                  parent="configuration_menu"
+                  action="author_list_action"/>
+        <menuitem id="book_publisher_menu" name="Book Publishers"
+                  parent="configuration_menu"
+                  action="book_publisher_list_action"/>
+
+        <!--<record model="res.partner.category" id="teacher1">-->
+            <!--<field name="name">Teacher / Level 1</field>-->
+        <!--</record>-->
+        <!--<record model="res.partner.category" id="teacher2">-->
+            <!--<field name="name">Teacher / Level 2</field>-->
+        <!--</record>-->
+    </data>
+</odoo>
