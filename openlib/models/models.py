@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, exceptions
 
 class Book(models.Model):
     _name = 'openlib.book'
@@ -14,9 +14,16 @@ class Book(models.Model):
         ondelete='set null', string="Language", index=True)
 
     author_id = fields.Many2many('res.partner', string="Author",
-        domain=[('author', '=', True)])
+        ondelete='cascade', domain=[('author', '=', True)])
     publisher_id = fields.Many2one('res.partner', string="Publisher",
-        domain=[('publisher', '=', True)])
+        ondelete='set null', domain=[('publisher', '=', True)])
+
+    @api.constrains('author_id')
+    def _check_instructor_not_in_attendees(self):
+        for r in self:
+            if len(r.author_id) == 0:
+                raise exceptions.ValidationError("A book must have at least one author")
+
 
 class BookGenre(models.Model):
     _name = 'openlib.genre'

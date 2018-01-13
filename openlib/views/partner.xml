@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <notebook position="inside">
-                    <page string="Authors">
+                    <page string="Written Books">
                         <group>
                             <field name="author"/>
                             <field name="written_books"/>
@@ -24,7 +24,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <notebook position="inside">
-                    <page string="Book Publishers">
+                    <page string="Published Books">
                         <group>
                             <field name="publisher"/>
                             <field name="published_books"/>
