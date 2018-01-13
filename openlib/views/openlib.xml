@@ -21,6 +21,16 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="book_tree_view">
+            <field name="name">book.tree</field>
+            <field name="model">openlib.book</field>
+            <field name="arch" type="xml">
+                <tree string="Course Tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="book_list_action">
             <field name="name">Books</field>
             <field name="res_model">openlib.book</field>

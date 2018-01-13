@@ -1,0 +1,22 @@
+<odoo>
+    <data noupdate="0">
+        <record model="openlib.genre" id="genre_science_fiction">
+            <field name="name">Science Fiction</field>
+        </record>
+        <record model="openlib.genre" id="genre_drama">
+            <field name="name">Drama</field>
+        </record>
+        <record model="openlib.genre" id="genre_adventure">
+            <field name="name">Adventure</field>
+        </record>
+        <record model="openlib.genre" id="genre_horror">
+            <field name="name">Horror</field>
+        </record>
+        <record model="openlib.genre" id="genre_biography">
+            <field name="name">Biography</field>
+        </record>
+        <record model="openlib.genre" id="genre_science">
+            <field name="name">Science</field>
+        </record>
+    </data>
+</odoo>

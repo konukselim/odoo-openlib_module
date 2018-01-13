@@ -1,0 +1,50 @@
+<odoo>
+    <data noupdate="0">
+        <record id="res_partner_1" model="res.partner">
+            <field name="name">Metglobal</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+            <field name="is_company">1</field>
+            <field name="city">Istanbul</field>
+            <field name="street">Yildiz Teknik Teknopark</field>
+            <field name="email">metglobal@metglobal.com</field>
+            <field name="phone">(+90) (0212) 123 45 67</field>
+            <field name="website">http://www.metglobal.com</field>
+        </record>
+        <record id="res_partner_selim" model="res.partner">
+            <field name="name">Ahmet Selim Konuk</field>
+            <field name="parent_id" eval="ref('res_partner_1')"/>
+            <field name="function">Software Developer</field>
+        </record>
+        <record id="res_partner_orhan" model="res.partner">
+            <field name="name">Orhan Kemal</field>
+            <field name="function">Book Author</field>
+            <field name="author">true</field>
+        </record>
+        <record id="res_partner_tolkien" model="res.partner">
+            <field name="name">J.R.R Tolkien</field>
+            <field name="function">Professor</field>
+            <field name="author">true</field>
+        </record>
+        <record id="res_partner_einstein" model="res.partner">
+            <field name="name">Albert Einstein</field>
+            <field name="function">Scientist</field>
+            <field name="author">true</field>
+        </record>
+        <record id="res_partner_minkowski" model="res.partner">
+            <field name="name">Hermann Minkowski</field>
+            <field name="function">Mathematician</field>
+            <field name="author">true</field>
+        </record>
+        <record id="res_partner_metis" model="res.partner">
+            <field name="name">Metis Yayinlari</field>
+            <field name="function">Publisher</field>
+            <field name="publisher">true</field>
+        </record>
+        <record id="res_partner_say" model="res.partner">
+            <field name="name">Say Yayinlari</field>
+            <field name="function">Publisher</field>
+            <field name="publisher">true</field>
+        </record>
+    </data>
+</odoo>

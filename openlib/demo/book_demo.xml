@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="0">
+        <record model="openlib.book" id="book_lord_of_the_rings">
+            <field name="name">The Lord of the Rings</field>
+            <field name="ISBN">1234567891011</field>
+            <field name="publication_date">1954-07-29</field>
+            <field name="genre" eval="ref('genre_science_fiction')"/>
+            <field name="language" eval="ref('language_english')"/>
+            <field name="author_id"  eval="[(6,1,[ref('res_partner_tolkien')])]"/>
+            <field name="publisher_id" eval="ref('res_partner_metis')"/>
+        </record>
+        <record model="openlib.book" id="book_baba_evi">
+            <field name="name">Baba Evi</field>
+            <field name="genre" eval="ref('genre_adventure')"/>
+            <field name="language" eval="ref('language_turkish')"/>
+            <field name="author_id"  eval="[(6,1,[ref('res_partner_orhan')])]"/>
+        </record>
+        <record model="openlib.book" id="book_principle_of_relativity">
+            <field name="name">The Principle of Relativity</field>
+            <field name="genre" eval="ref('genre_science')"/>
+            <field name="language" eval="ref('language_german')"/>
+            <field name="author_id" eval="[(6,1,[ref('res_partner_einstein'), ref('res_partner_minkowski')])]"/>
+        </record>
+    </data>
+</odoo>

@@ -32,7 +32,10 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/genre_demo.xml',
+        'demo/language_demo.xml',
+        'demo/partner_demo.xml',
+        'demo/book_demo.xml',
     ],
     'installable': True,
     'application': True,

@@ -35,26 +35,17 @@
         </record>
 
         <record model="ir.actions.act_window" id="author_list_action">
-            <field name="name">Authors</field>
+            <field name="name">Partners</field>
             <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-
-        <record model="ir.actions.act_window" id="book_publisher_list_action">
-            <field name="name">Book Publishers</field>
-            <field name="res_model">res.partner</field>
-            <field name="view_mode">tree,form</field>
-        </record>
 
         <menuitem id="configuration_menu" name="Configuration"
                   parent="main_openlib_menu"/>
-        <menuitem id="author_menu" name="Authors"
+        <menuitem id="author_menu" name="Add Author or Publisher"
                   parent="configuration_menu"
                   action="author_list_action"/>
-        <menuitem id="book_publisher_menu" name="Book Publishers"
-                  parent="configuration_menu"
-                  action="book_publisher_list_action"/>
 
     </data>
 </odoo>

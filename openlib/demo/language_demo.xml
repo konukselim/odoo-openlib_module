@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="0">
+        <record model="openlib.language" id="language_english">
+            <field name="name">English</field>
+        </record>
+        <record model="openlib.language" id="language_turkish">
+            <field name="name">Turkish</field>
+        </record>
+        <record model="openlib.language" id="language_german">
+            <field name="name">German</field>
+        </record>
+        <record model="openlib.language" id="language_spanish">
+            <field name="name">Spanish</field>
+        </record>
+        <record model="openlib.language" id="language_french">
+            <field name="name">French</field>
+        </record>
+    </data>
+</odoo>
