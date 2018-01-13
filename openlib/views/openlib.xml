@@ -13,6 +13,8 @@
                             <field name="publication_date"/>
                             <field name="genre"/>
                             <field name="language"/>
+                            <field name="author_id"/>
+                            <field name="publisher_id"/>
                         </group>
                     </sheet>
                 </form>

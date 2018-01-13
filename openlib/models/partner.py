@@ -11,4 +11,4 @@ class Partner(models.Model):
     written_books = fields.Many2many('openlib.book',
         string="Books", readonly=True)
     published_books = fields.Many2many('openlib.book',
-        string="Books2", readonly=True)
+        string="Books", readonly=True)
