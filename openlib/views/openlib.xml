@@ -27,6 +27,7 @@
             <field name="arch" type="xml">
                 <tree string="Course Tree">
                     <field name="name"/>
+                    <field name="formatted_author"/>
                 </tree>
             </field>
         </record>

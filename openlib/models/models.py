@@ -18,6 +18,16 @@ class Book(models.Model):
     publisher_id = fields.Many2one('res.partner', string="Publisher",
         ondelete='set null', domain=[('publisher', '=', True)])
 
+    formatted_author = fields.Char(string="Authors", compute='get_formatted_authors')
+
+    @api.depends('author_id')
+    def get_formatted_authors(self):
+        for r in self:
+            fa = ""
+            for a in r.author_id:
+                fa += a.name + ","
+            r.formatted_author = fa[:-1]
+
     @api.constrains('author_id')
     def _check_instructor_not_in_attendees(self):
         for r in self:
